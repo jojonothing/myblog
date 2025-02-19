@@ -1,0 +1,58 @@
+<article class="card bg-base-100/80 backdrop-blur transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-hidden rounded-xl">
+  <!-- 图片容器 -->
+  <div class="aspect-[1.85/1] overflow-hidden">
+    {{ if .Params.cover }}
+    <img 
+      src="{{ .Params.cover }}" 
+      alt="{{ .Title }}"
+      class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+      loading="lazy"
+    />
+    {{ else if .Params.featured_image }}
+    <img 
+      src="{{ .Params.featured_image }}" 
+      alt="{{ .Title }}"
+      class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+      loading="lazy"
+    />
+    {{ else }}
+    <div class="w-full h-full bg-gradient-to-br from-primary/5 to-secondary/5"></div>
+    {{ end }}
+  </div>
+
+  <!-- 内容区域 -->
+  <div class="p-6">
+    <!-- 标题 -->
+    <h2 class="text-xl font-medium mb-2 line-clamp-2 hover:text-primary transition-colors">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h2>
+
+    <!-- 日期 -->
+    <time class="text-sm text-base-content/60 block mb-4">
+      {{ .Date.Format "2006年01月02日" }}
+    </time>
+
+    <!-- 摘要 -->
+    <div class="text-base-content/70 text-sm leading-relaxed line-clamp-3 mb-4">
+      {{ .Summary | plainify | truncate 120 }}
+    </div>
+
+    <!-- 底部信息 -->
+    <div class="flex items-center justify-between text-sm text-base-content/60">
+      <!-- 作者信息 -->
+      <div class="flex items-center gap-2">
+        {{ with .Params.author }}
+        <img 
+          src="/img/avatar.jpg" 
+          alt="{{ . }}" 
+          class="w-6 h-6 rounded-full"
+        />
+        <span>{{ . }}</span>
+        {{ end }}
+      </div>
+
+      <!-- 阅读时间 -->
+      <span>{{ .ReadingTime }} 分钟阅读</span>
+    </div>
+  </div>
+</article>

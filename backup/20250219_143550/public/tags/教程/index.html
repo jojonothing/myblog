@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="zh"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教程 | 赵雄州的博客</title>
+
+    
+
+<link rel="canonical" href="http://10.40.110.47/tags/%E6%95%99%E7%A8%8B/" />
+
+
+
+<meta name="author" content="赵雄州" />
+<meta name="description" content="与其感慨路难行，不如马上出发" />
+
+
+
+<meta name="generator" content="Hugo 0.139.3">
+
+
+<meta property="og:url" content="http://10.40.110.47/tags/%E6%95%99%E7%A8%8B/">
+  <meta property="og:site_name" content="赵雄州的博客">
+  <meta property="og:title" content="教程">
+  <meta property="og:description" content="与其感慨路难行，不如马上出发">
+  <meta property="og:locale" content="zh">
+  <meta property="og:type" content="website">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="教程">
+  <meta name="twitter:description" content="与其感慨路难行，不如马上出发">
+
+
+
+
+  
+
+<link rel="stylesheet" href="/css/output.min.css" />
+
+
+
+
+     
+
+    
+    <link rel="stylesheet" href="/css/custom.css" />
+    
+
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="翻转一下！">
+        <div class="h-10 rounded-full">
+          <img src="/me/avatar.jpg" alt="" />
+        </div>
+      </div>
+
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+        
+
+
+<li>
+  <div role="link" tabindex="0" class="inline-flex items-center p-2 cursor-pointer" @click="flip = !flip" title="关于">
+    <ion-icon name="information-circle"></ion-icon>关于</div>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="归档">
+    <ion-icon name="archive"></ion-icon>
+    归档
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="所有分类">
+    <ion-icon name="grid"></ion-icon>
+    所有分类
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="所有标签">
+    <ion-icon name="pricetags"></ion-icon>
+    所有标签
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+      
+      
+      <div role="link" tabindex="0" class="text-sm font-semibold cursor-pointer hover:underline" @click="flip = !flip" title="关于">关于</div>
+      
+      
+
+      
+      
+
+      
+
+      
+      
+
+
+
+
+
+      
+      
+
+
+
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="归档">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="所有分类">
+  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="所有标签">
+  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+</a>
+
+
+      
+
+      
+
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+
+
+<div class="flex flex-col md:flex-row mt-4">
+
+  <div class="md:basis-[200px] lg:basis-[300px] p-4 prose dark:prose-invert">
+    <h1 class="text-2xl">教程</h1>
+    <p class="text-sm">3篇文章</p>
+    <div class="flex flex-wrap gap-4 mt-6">
+      
+
+      
+      
+      <a href="/tags/hugo/" class="badge h-6 no-underline hover:badge-primary">
+        Hugo
+      </a>
+      
+      
+      
+      <a href="/tags/raspberrypi/" class="badge h-6 no-underline hover:badge-primary">
+        RaspberryPi
+      </a>
+      
+      
+      
+      <a href="/tags/%E9%83%A8%E7%BD%B2/" class="badge h-6 no-underline hover:badge-primary">
+        部署
+      </a>
+      
+      
+      
+      <span class="badge h-6 badge-primary">
+        教程
+      </span>
+      
+      
+    </div>
+  </div>
+  
+  <div class="divider divider-vertical md:divider-horizontal px-4 md:px-0"></div>
+  
+  <div class="flex-1">
+    
+
+    
+    <div class="dream-grid">
+    
+      <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+        <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/guide/hugo%E6%97%A5%E5%B8%B8%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
+  
+  <figure>
+    
+    <img src="/images/default1.jpg" alt="Hugo日常使用指南" />
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">Hugo日常使用指南</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期五, 12月 6, 2024
+    
+    </p>
+
+    
+    <div class="summary-content">
+      <h1 id="hugo-日常使用指南">Hugo 日常使用指南</h1>
+<h2 id="一基本操作">一、基本操作</h2>
+<ol>
+<li><strong>创建新文章</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 创建新文章</span>
+</span></span><span style="display:flex;"><span>hugo new posts/my-new-post.md
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 或者指定类型</span>
+</span></span><span style="display:flex;"><span>hugo new --kind post posts/my-new-post.md
+</span></span></code></pre></div><ol start="2">
+<li><strong>本地预览</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 启动本地服务器</span>
+</span></span><span style="display:flex;"><span>hugo server -D  <span style="color:#75715e"># -D 参数会显示草稿</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 指定端口启动</span>
+</span></span><span style="display:flex;"><span>hugo server -D --port <span style="color:#ae81ff">1313</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 允许局域网访问</span>
+</span></span><span style="display:flex;"><span>hugo server -D --bind 0.0.0.0
+</span></span></code></pre></div><h2 id="二文章前置参数front-matter">二、文章前置参数（Front Matter）</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#f92672">title</span>: <span style="color:#e6db74">&#34;文章标题&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">date</span>: …</span></span></span></span></span></span></code></pre></div>
+    </div>
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">赵雄州</span>
+  
+  </span>
+</div>
+
+
+      <div class="flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>2分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+      </div>
+    
+      <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+        <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/guide/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%9C%8D%E5%8A%A1%E4%B8%8E%E7%BB%B4%E6%8A%A4%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%A1%88/">
+  
+  <figure>
+    
+    <img src="/images/default2.jpg" alt="树莓派服务与维护完整指南的使用方案" />
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">树莓派服务与维护完整指南的使用方案</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期四, 12月 5, 2024
+    
+    </p>
+
+    
+    <div class="summary-content">
+      <h1 id="树莓派服务部署与维护完整指南使用方案">树莓派服务部署与维护完整指南使用方案</h1>
+<h2 id="一初始部署流程">一、初始部署流程</h2>
+<ol>
+<li><strong>基础环境准备</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 1. 克隆所有脚本</span>
+</span></span><span style="display:flex;"><span>git clone https://github.com/yourusername/raspberry-pi-scripts.git
+</span></span><span style="display:flex;"><span>cd raspberry-pi-scripts
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 设置执行权限</span>
+</span></span><span style="display:flex;"><span>chmod +x *.sh
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 初始化系统</span>
+</span></span><span style="display:flex;"><span>./initial_setup.sh
+</span></span></code></pre></div><ol start="2">
+<li><strong>服务部署顺序</strong></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 1. 部署基础服务</span>
+</span></span><span style="display:flex;"><span>./deploy_base_services.sh
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 2. 部署 Web 服务</span>
+</span></span><span style="display:flex;"><span>./deploy_nginx.sh
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 3. 部署 AI …</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></code></pre></div>
+    </div>
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">赵雄州</span>
+  
+  </span>
+</div>
+
+
+      <div class="flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>2分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+      </div>
+    
+      <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+        <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/guide/%E6%A0%91%E8%8E%93%E6%B4%BE%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E4%B8%8E%E7%BB%B4%E6%8A%A4%E5%AE%8C%E6%95%B4%E6%8C%87%E5%8D%97/">
+  
+  <figure>
+    
+    <img src="/images/default3.jpg" alt="树莓派服务部署与维护完整指南" />
+    
+  </figure>
+  
+
+  <div class="card-body">
+    <h2 class="card-title">树莓派服务部署与维护完整指南</h2>
+
+    <p class="date text-base-content/60">
+    
+      星期二, 12月 3, 2024
+    
+    </p>
+
+    
+    <div class="summary-content">
+      <h1 id="树莓派服务部署与维护完整指南">树莓派服务部署与维护完整指南</h1>
+<h2 id="一系统概况">一、系统概况</h2>
+<h3 id="1-硬件资源">1. 硬件资源</h3>
+<ul>
+<li><strong>处理器</strong>: ARM64 架构</li>
+<li><strong>总内存</strong>: 3.7GB</li>
+<li><strong>可用内存</strong>: ~2.5GB</li>
+<li><strong>Swap</strong>: 512MB</li>
+<li><strong>网络</strong>: wlan0 (IP: 10.40.110.47)</li>
+</ul>
+<h3 id="2-服务概览">2. 服务概览</h3>
+<ol>
+<li><strong>AI 智能助手</strong>
+<ul>
+<li>端口: 8080</li>
+<li>基于: llama.cpp</li>
+<li>模型: Phi-3-mini-4k-instruct-q4.gguf</li>
+<li>资源占用:
+<ul>
+<li>CPU: ~300% (多核)</li>
+<li>内存: ~3GB</li>
+<li>Swap: 511Mi</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>个人博客</strong>
+<ul>
+<li>端口: 80</li>
+<li>框架: Hugo v0.139.3-extended</li>
+<li>主题: Ananke</li>
+<li>Web服务器: Nginx</li>
+<li> …</li></ul></li></li></ul></li></ol>
+    </div>
+
+    <div class="card-actions justify-between items-center mt-4">
+      <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name">赵雄州</span>
+  
+  </span>
+</div>
+
+
+      <div class="flex items-center">
+        <ion-icon name="time" class="mr-1"></ion-icon>
+        <span>47分钟阅读</span>
+      </div>
+    </div>
+  </div>
+</a>
+
+      </div>
+    
+    </div>
+    
+
+    
+  </div>
+</div>
+
+
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2024 - 2025 赵雄州的博客
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'moon', status: 'y' },
+    { name: 'sunny', status: 'n' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center h-[32px] px-2 gap-2 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
+            
+            <div class="dream-grid dream-grid-about">
+  
+  
+  
+  <div class="w-full md:w-1/2 lg:w-1/3 xl:w-1/4 p-4 dream-column">
+    <article
+      class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl dark:border dark:border-base-content/30"
+    >
+      <div class="card-body">
+        <div class="card-title">About Me</div>
+
+        <div class="prose dark:prose-invert">
+          <p>Hi, my name is Your Name.
+This is my blog.</p>
+
+        </div>
+      </div>
+    </article>
+  </div>
+  
+  
+
+  
+
+  
+</div>
+
+            
+
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2024 - 2025 赵雄州的博客
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'moon', status: 'y' },
+    { name: 'sunny', status: 'n' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center h-[32px] px-2 gap-2 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+  window.lightTheme =  null 
+  window.darkTheme =  null 
+</script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
+    
+  
+  <script src="/js/grid.min.js"></script>
+
+
+
+
+  
+
+<script src="/js/main.min.js"></script>
+
+    
+
+
+
+
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>

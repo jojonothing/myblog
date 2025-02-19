@@ -1,0 +1,9 @@
+{
+  "name": "myblog",
+  "version": "1.0.0",
+  "description": "My Hugo blog",
+  "scripts": {
+    "build": "hugo",
+    "dev": "hugo server -D"
+  }
+}

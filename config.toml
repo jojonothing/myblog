@@ -1,0 +1,60 @@
+baseURL = "http://10.10.164.61"
+defaultContentLanguage = "zh"
+languageCode = "zh"
+title = "赵雄州的博客"
+theme = "dream"
+
+[params]
+  # 基本信息
+  author = "赵雄州"
+  description = "与其感慨路难行，不如马上出发"
+  avatar = "/me/avatar.jpg"
+  
+  # 主题设置
+  background = "#f7f7f7"
+  backgroundImage = ""
+  linkColor = "seagreen"
+  summaryLength = 70  # 限制摘要字数
+
+  # 功能开关
+  darkMode = true
+  enableSearch = true
+  showSummaryCoverInPost = true
+  
+  # 文章设置
+  headerBottomText = ""
+  
+  # 社交链接
+  github = "your-github"
+  
+  # 页脚设置
+  siteStartYear = 2024
+
+  # 自定义 CSS
+  customCSS = ["css/custom.css"]
+
+  [params.advanced]
+    customCSS = ["css/custom.css"]
+
+  [params.responsiveImages]
+    enable = true
+    sizes = "(max-width: 600px) 100vw, 50vw"
+    srcset = "600 400 800"
+
+[module]
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+  [[module.mounts]]
+    source = "assets/media/images"  
+    target = "static/images"
+  [[module.mounts]]
+    source = "content/images"
+    target = "static/images"
+
+[imaging]
+  quality = 85
+  anchor = "smart"
+  [imaging.exif]
+    rotate = true
+    validate = true

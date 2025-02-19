@@ -1,0 +1,57 @@
+Start building sites … 
+hugo v0.139.3-2f6864387cd31b975914e8373d4bf38bddbd47bc+extended linux/arm64 BuildDate=2024-11-29T15:36:56Z VendorInfo=gohugoio
+
+INFO  build:  step process substep collect files 5 files_total 5 pages_total 4 resources_total 1 duration 128.17556ms
+INFO  build:  step process duration 134.322537ms
+INFO  build:  step assemble duration 17.921609ms
+INFO  static: syncing static files to / duration 243.450993ms
+INFO  build:  step render substep pages site zh outputFormat html duration 1.280007468s
+INFO  build:  step render substep pages site zh outputFormat rss duration 1m23.965635608s
+INFO  build:  step render pages 23 content 14 duration 1m25.301761908s
+INFO  build:  step render deferred count 0 duration 6.574µs
+INFO  build:  step postProcess duration 51.239636ms
+
+Template Metrics:
+
+       cumulative       average       maximum         
+         duration      duration      duration  count  template
+       ----------      --------      --------  -----  --------
+      2.32366663s  110.650791ms  620.330513ms     21  _default/summary.html
+      2.14181675s  237.979638ms  657.979493ms      9  _internal/_default/rss.xml
+     912.454111ms   70.188777ms  647.090115ms     13  partials/head.html
+     882.981515ms  176.596303ms  788.374299ms      5  _default/term.html
+     856.341152ms  856.341152ms  856.341152ms      1  index.html
+      850.88503ms  425.442515ms  814.437101ms      2  _default/terms.html
+     804.426096ms  268.142032ms  712.771129ms      3  _default/single.html
+     127.075362ms  127.075362ms  127.075362ms      1  404.html
+      90.272441ms    6.944033ms   14.372816ms     13  partials/nav.html
+      50.573976ms    3.890305ms    9.977265ms     13  partials/navMobileMenu.html
+      50.140855ms    3.856988ms   31.976156ms     13  partials/back.html
+      29.490822ms     453.704µs    3.033342ms     65  partials/renderMobileNavItem.html
+      26.289353ms   26.289353ms   26.289353ms      1  _internal/_default/sitemap.xml
+      23.678871ms      364.29µs    3.422685ms     65  partials/renderNavItem.html
+      21.307516ms    1.639039ms   16.603824ms     13  partials/scripts.html
+      13.322026ms     512.385µs    1.854127ms     26  partials/footer.html
+      12.486488ms     430.568µs    4.287203ms     29  partials/_funcs/get-page-images.html
+       9.197152ms    9.197152ms    9.197152ms      1  _default/_markup/render-codeblock-mermaid.html
+       7.837625ms    7.837625ms    7.837625ms      1  section/posts.html
+       7.121511ms     273.904µs    1.604928ms     26  partials/footerLeft.html
+       2.727182ms     113.632µs     578.099µs     24  partials/author.html
+       2.550556ms     850.185µs    1.414765ms      3  partials/share.html
+       1.496468ms     187.058µs      463.73µs      8  _internal/alias.html
+        960.832µs      36.955µs      847.37µs     26  partials/footerRight.html
+        482.212µs     160.737µs     383.529µs      3  partials/commentSystemHeads.html
+
+INFO  build:  duration 1m25.506164412s
+
+                   | ZH  
+-------------------+-----
+  Pages            | 24  
+  Paginator pages  |  0  
+  Non-page files   |  0  
+  Static files     |  2  
+  Processed images |  0  
+  Aliases          |  8  
+  Cleaned          |  0  
+
+Total in 86446 ms

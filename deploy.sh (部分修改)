@@ -1,0 +1,41 @@
+# 添加预检函数
+check_requirements() {
+    local req_files=(
+        "content/_index.md"
+        "themes/ananke/assets/css/main.css"
+    )
+    for file in "${req_files[@]}"; do
+        if [ ! -f "$file" ]; then
+            log "关键源文件缺失: $file"
+            return 1
+        fi
+    done
+}
+
+# 修改验证逻辑
+verify_generated_files() {
+    local gen_files=(
+        "public/index.html"
+        "public/images/default2.jpg"
+        "public/css/custom.css"
+    )
+    local missing_counter=0
+    
+    for file in "${gen_files[@]}"; do
+        if [ ! -f "$file" ]; then
+            log "生成文件缺失: $file"
+            ((missing_counter++))
+        fi
+    done
+    
+    [ $missing_counter -eq 0 ] && return 0 || return 1
+}
+
+# 主流程调整
+main() {
+    check_requirements || exit 15
+    backup_system
+    generate_site
+    verify_generated_files || exit 5
+    restart_services
+} 

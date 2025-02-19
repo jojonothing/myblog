@@ -1,0 +1,28 @@
+<footer class="footer footer-center p-10 bg-base-100 text-base-content rounded">
+  <div class="grid grid-flow-col gap-4">
+    {{ range .Site.Menus.footer }}
+    <a href="{{ .URL }}" class="link link-hover">{{ .Name }}</a>
+    {{ end }}
+  </div> 
+  
+  <div>
+    <div class="grid grid-flow-col gap-4">
+      <!-- 社交媒体图标 -->
+      {{ with .Site.Params.social }}
+      {{ range . }}
+      <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" class="hover:text-primary">
+        <ion-icon name="{{ .icon }}" class="text-2xl"></ion-icon>
+      </a>
+      {{ end }}
+      {{ end }}
+    </div>
+  </div> 
+  
+  <div>
+    <p>Copyright © {{ now.Format "2006" }} - {{ .Site.Title }} | Powered by <a href="https://gohugo.io/" class="link">Hugo</a></p>
+  </div>
+</footer>
+
+<!-- Ion Icons -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

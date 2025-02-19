@@ -1,0 +1,100 @@
+/* 卡片容器样式 */
+.dream-card {
+  background: var(--card-background, #fff);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  /* 添加固定高度和内容控制 */
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dream-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 卡片图片容器 */
+.dream-card .card-cover {
+  height: 200px;
+  overflow: hidden;
+}
+
+.dream-card .card-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 卡片内容区域 */
+.dream-card .card-body {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* 文章标题 */
+.dream-card .card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* 文章摘要 */
+.dream-card .card-content {
+  flex: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+
+/* 卡片底部元信息 */
+.dream-card .card-meta {
+  margin-top: auto;
+  padding-top: 1rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary, #666);
+}
+
+.card-body {
+  max-height: 600px;  /* 设置最大高度 */
+  overflow: hidden;
+}
+
+/* 对代码块特殊处理 */
+.summary-content pre {
+  max-height: 200px;
+  overflow: hidden;
+}
+
+/* 摘要内容限制 */
+.card-body .summary-content {
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 代码块样式优化 */
+.card-body pre {
+  max-height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 添加渐变遮罩效果 */
+.card-body pre::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(transparent, var(--tw-prose-pre-bg));
+}

@@ -1,0 +1,47 @@
+<header class="bg-base-100 shadow-sm sticky top-0 z-50">
+  <div class="container mx-auto px-4">
+    <div class="navbar min-h-16">
+      <!-- 左侧 Logo -->
+      <div class="flex-1">
+        <a href="/" class="text-xl font-bold">{{ .Site.Title }}</a>
+      </div>
+
+      <!-- 右侧导航 -->
+      <div class="flex-none">
+        <ul class="menu menu-horizontal px-1">
+          {{ range .Site.Menus.main }}
+          <li>
+            <a href="{{ .URL }}" class="text-base-content/80 hover:text-primary">
+              {{ .Name }}
+            </a>
+          </li>
+          {{ end }}
+          
+          <!-- 暗色模式切换按钮 -->
+          <li>
+            <button class="btn btn-ghost btn-circle" onclick="toggleTheme()">
+              <ion-icon name="moon-outline" class="text-xl dark:hidden"></ion-icon>
+              <ion-icon name="sunny-outline" class="text-xl hidden dark:block"></ion-icon>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+function toggleTheme() {
+  const html = document.documentElement;
+  const currentTheme = html.getAttribute('data-theme');
+  const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+  html.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme);
+}
+
+// 初始化主题
+(function() {
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+})();
+</script>

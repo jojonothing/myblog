@@ -1,0 +1,177 @@
+{{ define "main" }}
+<article class="max-w-4xl mx-auto">
+  <!-- 文章头部 -->
+  <header class="mb-8">
+    <h1 class="text-4xl font-bold mb-4">{{ .Title }}</h1>
+    <div class="flex flex-wrap items-center gap-4 text-base-content/60">
+      <time datetime="{{ .Date }}" class="flex items-center">
+        <ion-icon name="calendar-outline" class="mr-1"></ion-icon>
+        {{ .Date.Format "2006年01月02日" }}
+      </time>
+      <span class="flex items-center">
+        <ion-icon name="time-outline" class="mr-1"></ion-icon>
+        {{ .ReadingTime }} 分钟阅读
+      </span>
+      {{ with .Params.categories }}
+      <div class="flex items-center gap-2">
+        <ion-icon name="folder-outline"></ion-icon>
+        {{ range . }}
+        <a href="/categories/{{ . | urlize }}" class="hover:text-primary">{{ . }}</a>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </header>
+
+  <!-- 目录 -->
+  {{ if .TableOfContents }}
+  <div class="toc mb-8">
+    <details open>
+      <summary class="text-lg font-bold cursor-pointer mb-2">目录</summary>
+      {{ .TableOfContents }}
+    </details>
+  </div>
+  {{ end }}
+
+  <!-- 文章内容 -->
+  <div class="prose prose-lg dark:prose-invert">
+    {{ .Content }}
+  </div>
+
+  <!-- 文章底部 -->
+  <footer class="mt-8 pt-4 border-t border-base-content/10">
+    {{ with .Params.tags }}
+    <div class="flex flex-wrap items-center gap-2">
+      <ion-icon name="pricetags-outline" class="text-lg"></ion-icon>
+      {{ range . }}
+      <a href="/tags/{{ . | urlize }}" class="badge badge-outline hover:badge-primary">{{ . }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
+  </footer>
+
+  <!-- 上一篇/下一篇 -->
+  <nav class="flex justify-between mt-8">
+    {{ with .PrevInSection }}
+    <a href="{{ .RelPermalink }}" class="btn btn-ghost">
+      <ion-icon name="arrow-back-outline" class="mr-2"></ion-icon>
+      {{ .Title }}
+    </a>
+    {{ end }}
+    
+    {{ with .NextInSection }}
+    <a href="{{ .RelPermalink }}" class="btn btn-ghost">
+      {{ .Title }}
+      <ion-icon name="arrow-forward-outline" class="ml-2"></ion-icon>
+    </a>
+    {{ end }}
+  </nav>
+</article>
+
+<style>
+/* 文章内容基础样式 */
+.prose {
+  @apply max-w-none;
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+
+/* 段落和间距 */
+.prose p {
+  @apply my-6 leading-relaxed;
+}
+
+/* 标题样式 */
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  @apply font-bold text-base-content scroll-mt-20;
+}
+
+.prose h1 { @apply text-4xl mt-12 mb-6; }
+.prose h2 { @apply text-3xl mt-10 mb-5; }
+.prose h3 { @apply text-2xl mt-8 mb-4; }
+.prose h4 { @apply text-xl mt-6 mb-3; }
+
+/* 列表样式 */
+.prose ul,
+.prose ol {
+  @apply my-6 pl-6;
+}
+
+.prose ul { @apply list-disc; }
+.prose ol { @apply list-decimal; }
+
+.prose li {
+  @apply my-2;
+}
+
+/* 引用样式 */
+.prose blockquote {
+  @apply pl-4 border-l-4 border-primary italic my-6;
+}
+
+/* 代码块样式 */
+.prose pre {
+  @apply my-6 rounded-lg !important;
+  background: #2d2d2d !important;
+}
+
+.prose :not(pre) > code {
+  @apply px-2 py-1 rounded text-sm bg-base-200 font-mono;
+  color: currentColor !important;
+}
+
+/* 代码工具栏 */
+.code-toolbar {
+  @apply relative;
+}
+
+.code-toolbar > .toolbar {
+  @apply absolute right-2 top-2 opacity-100 !important;
+}
+
+.toolbar-item button {
+  @apply px-2 py-1 text-sm rounded bg-base-300 text-base-content/80 hover:bg-base-200;
+}
+
+/* 目录样式 */
+.toc {
+  @apply p-6 rounded-lg bg-base-200/50 backdrop-blur;
+}
+
+.toc nav > ul {
+  @apply pl-0 list-none;
+}
+
+.toc ul ul {
+  @apply pl-4 mt-2;
+}
+
+.toc a {
+  @apply text-base-content/80 hover:text-primary no-underline text-sm leading-relaxed block py-1;
+}
+
+/* 暗色模式适配 */
+[data-theme="dark"] .prose {
+  --tw-prose-body: theme('colors.gray.300');
+  --tw-prose-headings: theme('colors.white');
+  --tw-prose-links: theme('colors.blue.400');
+  --tw-prose-code: theme('colors.gray.300');
+  --tw-prose-pre-bg: theme('colors.gray.800');
+}
+
+[data-theme="dark"] .prose :not(pre) > code {
+  @apply bg-base-300;
+}
+
+[data-theme="dark"] .toolbar-item button {
+  @apply bg-base-200 hover:bg-base-100;
+}
+
+[data-theme="dark"] .toc {
+  @apply bg-base-300/50;
+}
+</style>
+{{ end }}
